@@ -49,7 +49,7 @@
 								<td><?php echo $category["name"]; ?></td>
 								<td><a href="" class="btn btn-outline-primary">Detail</a>
 									<a href="" class="btn btn-outline-warning">Edit</a>
-									<a href="" class="btn btn-outline-danger">Delete</a></td>
+									<a href="" class="btn btn-outline-danger btnDelete" data-id="<?php echo $category['id']; ?>">Delete</a></td>
 								</tr>
 								<?php
 							} 
@@ -61,6 +61,20 @@
 				</div>
 			</div>
 		</div>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			$(".btnDelete").click(function()
+			{
+				var id=$(this).data("id");
+				var ans=confirm("Are you sure to delete this row!");
+				if(ans)
+				{
+					$.post("category_delete.php",{category_id:id});
+				}
+			})
+		})
+	</script>
  <?php 
 
 	include "include/footer.php";

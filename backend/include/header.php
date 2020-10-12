@@ -20,6 +20,7 @@
   
   <!-- Custom styles for this page -->
   <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+  <script type="text/javascript" src="js/jquery.min.js"></script>
 
 </head>
 

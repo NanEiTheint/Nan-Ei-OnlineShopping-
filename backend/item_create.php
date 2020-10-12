@@ -1,6 +1,7 @@
 <?php 
 
 	include "include/header.php";
+	include "dbconnection.php";
 
  ?>
 
@@ -40,11 +41,45 @@
 				</div>
 				<div class="form-group">
 					<label id="brand">Brand</label>
-					<input type="number" name="brand" id="brand" class="form-control">
+					<!-- <input type="number" name="brand" id="brand" class="form-control"> -->
+					<select class="form-control" id="brand" name="brand">
+						<option>Choose.....</option>
+						<?php 
+							$sql="SELECT * FROM  brands";
+							$stmt=$pdo->prepare($sql);
+							$stmt->execute();
+							$brands=$stmt->fetchAll();
+
+
+							//var_dump($stmt);
+							foreach ($brands as $brand) {
+								# code...
+							
+
+						 ?>
+						 <option value="<?php echo $brand['id']; ?>"><?php echo $brand["name"]; ?> </option>
+						<?php } ?>
+						 
+					</select>
 				</div>
 				<div class="form-group">
 					<label id="subcategory">Subcategory</label>
-					<input type="number" name="subcategory" id="subcategory" class="form-control">
+						<!-- <input type="number" name="subcategory" id="subcategory" class="form-control"> -->
+						<select id="subcategory" name="subcategory" class="form-control">
+							<option>Choose.....</option>
+							<?php 
+
+								$sql="SELECT * FROM subcategories";
+								$stmt=$pdo->prepare($sql);
+								$stmt->execute();
+								$subcategories=$stmt->fetchAll();
+								foreach ($subcategories as $subcategory) {
+									
+							 ?>
+							 <option value="<?php echo $subcategory['id'] ?>"><?php echo $subcategory["name"]; ?></option>
+							 <?php } ?>
+						</select>
+					
 				</div>
 				<div class="form-group">
 					<label id="description">Description</label>

@@ -33,7 +33,7 @@
 					</tfoot>
 					<tbody>
 						<?php 
-						$sql="SELECT * FROM subcategories";
+						$sql="SELECT subcategories.*,categories.name as cat_name FROM subcategories,categories WHERE subcategories.category_id=categories.id";
 						$stmt=$pdo->prepare($sql);
 						$stmt->execute();
                   			//var_dump($stmt);
@@ -48,10 +48,10 @@
 							<tr>
 								<td><?php echo $no++ ;?></td>
 								<td><?php echo $subcategory["name"]; ?></td>
-								<td><?php echo $subcategory["category_id"]; ?></td>
+								<td><?php echo $subcategory["cat_name"]; ?></td>
 								<td><a href="" class="btn btn-outline-primary">Detail</a>
 									<a href="" class="btn btn-outline-warning">Edit</a>
-									<a href="" class="btn btn-outline-danger">Delete</a></td>
+									<a href="" class="btn btn-outline-danger btnDelete" data-id="<?php echo $subcategory['id']; ?>">Delete</a></td>
 								</tr>
 								<?php
 							} 
@@ -63,6 +63,20 @@
 				</div>
 			</div>
 		</div>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			$(".btnDelete").click(function()
+			{
+				var id=$(this).data("id");
+				var ans=confirm("Are you sure to delete this row!");
+				if(ans)
+				{
+					$.post("subcategory_delete.php",{subcat_id:id});
+				}
+			})
+		})
+	</script>
  <?php 
 	
 	include "include/footer.php";
