@@ -9,7 +9,7 @@
 
 	$basepath="img/brands/";
 	$fullpath=$basepath.$photo["name"];
-	echo "$fullpath";
+	//echo "$fullpath";
 	move_uploaded_file($photo["tmp_name"], $fullpath);
 
 	$sql="INSERT INTO brands

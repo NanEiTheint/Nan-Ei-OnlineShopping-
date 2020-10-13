@@ -48,7 +48,7 @@
 								<td><?php echo $no++ ;?></td>
 								<td><?php echo $category["name"]; ?></td>
 								<td><a href="" class="btn btn-outline-primary">Detail</a>
-									<a href="" class="btn btn-outline-warning">Edit</a>
+									<a href="category_edit.php?id=<?php echo $category['id'] ?>" class="btn btn-outline-warning">Edit</a>
 									<a href="" class="btn btn-outline-danger btnDelete" data-id="<?php echo $category['id']; ?>">Delete</a></td>
 								</tr>
 								<?php

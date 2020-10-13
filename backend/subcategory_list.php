@@ -50,7 +50,7 @@
 								<td><?php echo $subcategory["name"]; ?></td>
 								<td><?php echo $subcategory["cat_name"]; ?></td>
 								<td><a href="" class="btn btn-outline-primary">Detail</a>
-									<a href="" class="btn btn-outline-warning">Edit</a>
+									<a href="subcategory_edit.php?id=<?php echo $subcategory['id']; ?>" class="btn btn-outline-warning">Edit</a>
 									<a href="" class="btn btn-outline-danger btnDelete" data-id="<?php echo $subcategory['id']; ?>">Delete</a></td>
 								</tr>
 								<?php

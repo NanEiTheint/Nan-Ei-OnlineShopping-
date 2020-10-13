@@ -48,7 +48,7 @@
 								<td><?php echo $no++ ;?></td>
 								<td><?php echo $brand["name"]; ?></td>
 								<td><a href="" class="btn btn-outline-primary">Detail</a>
-									<a href="" class="btn btn-outline-warning">Edit</a>
+									<a href="brand_edit.php?id=<?php echo $brand['id']; ?>" class="btn btn-outline-warning">Edit</a>
 									<a href="" class="btn btn-outline-danger btnDelete" data-id="<?php echo $brand['id']; ?>">Delete</a></td>
 								</tr>
 								<?php
