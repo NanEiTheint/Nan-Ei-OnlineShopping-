@@ -8,7 +8,7 @@
 
 	//echo "$email and $password";
 
-	$sql="SELECT * FROM users WHERE email=:user_email AND password=:user_password";
+	$sql="SELECT users.*,roles.name as role_name FROM users INNER JOIN model_has_roles ON users.id=model_has_roles.user_id INNER JOIN roles ON roles.id=model_has_roles.role_id WHERE email=:user_email AND password=:user_password";
 
 	$stmt=$pdo->prepare($sql);
 	$stmt->bindParam(":user_email",$email);
@@ -16,7 +16,7 @@
 	$stmt->execute();
 	$data=$stmt->fetch(PDO::FETCH_ASSOC);
 
-	//var_dump($data);
+	//var_dump($data);die();
 	if(data)
 	{
 		$_SESSION['loginuser']=$data;

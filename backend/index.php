@@ -1,5 +1,9 @@
 
 <?php 
+    session_start();
+    if(isset($_SESSION['loginuser']) && $_SESSION['loginuser']['role_name']=='Admin')
+    {
+
     include "include/header.php";
 
  ?>
@@ -305,6 +309,12 @@
 
       
 <?php 
-
+  
   include "include/footer.php";
+  }
+  else
+  {
+    header("location:../index.php");
+  }
+
  ?>
