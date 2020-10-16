@@ -4,7 +4,7 @@
 	include "dbconnection.php";
 
 	$email=$_POST["email"];
-	$password=$_POST["password"];
+	$password=sha1($_POST["password"]);
 
 	//echo "$email and $password";
 

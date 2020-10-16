@@ -64,6 +64,7 @@
 	}
 	else
 	{
+		$pass=sha1($password);
 
 		$sql="INSERT INTO users(name,profile,phone,address,email,password) VALUES(:user_name,:user_profile,:user_phone,:user_address,:user_email,:user_password)";
 
@@ -73,7 +74,7 @@
 		$stmt->bindParam(":user_phone",$phone);
 		$stmt->bindParam(":user_address",$address);
 		$stmt->bindParam(":user_email",$email);
-		$stmt->bindParam(":user_password",$password);
+		$stmt->bindParam(":user_password",$pass);
 
 		$stmt->execute();
 		if($stmt->rowCount())
