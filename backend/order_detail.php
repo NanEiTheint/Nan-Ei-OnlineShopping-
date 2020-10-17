@@ -22,6 +22,10 @@
 	//var_dump($item_orders);
 
  ?>
+ <div class="d-sm-flex align-items-center justify-content-between mb-4">
+		<h1 class="h3 mb-0 text-gray-800">Voucher</h1>
+		<a href="order_list.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-backward fa-sm text-white-50"></i>Go Back</a>
+	</div>
  <div class="container py-5">
  	<div class="row">
  		<div class="offset-2 col-md-8">

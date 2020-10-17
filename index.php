@@ -12,30 +12,37 @@
 
  ?>
 	<!-- Carousel -->
-	<div class="container-fluid container-carousel carousel-image  pt-3">
-		<div class="carousel slide" id="headerCarousel" data-ride="carousel">
-			<ol class="carousel-indicators">
-				<li data-target="#headerCarousel" data-slide-to="0" class="active"></li>
-				<li data-target="#headerCarousel" data-slide-to="1" class=""></li>
-				<li data-target="#headerCarousel" data-slide-to="2" class=""></li>
-			</ol>
-			<div class="carousel-inner">
-				<div class="carousel-item active">
-					<img src="image/img6.jpg" class="d-block w-100">
-					<div class="img-overlay"></div>
-				</div>
-				<div class="carousel-item">
-					<img src="image/img7.png" class="d-block w-100">
-					<div class="img-overlay"></div>
-				</div>
-				 <div class="carousel-item">
-				 	<img src="image/img10.jpg" class="d-block w-100">
-				 	<div class="img-overlay"></div>
-				 		
-				 </div>
+	<div class="container py-4">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="container-carousel carousel-image pt-3">
+					<div class="carousel slide" id="headerCarousel" data-ride="carousel">
+						<ol class="carousel-indicators">
+							<li data-target="#headerCarousel" data-slide-to="0" class="active"></li>
+							<li data-target="#headerCarousel" data-slide-to="1" class=""></li>
+							<li data-target="#headerCarousel" data-slide-to="2" class=""></li>
+						</ol>
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<img src="image/thi3.jpg" class="d-block w-100">
+								<div class="img-overlay"></div>
+							</div>
+							<div class="carousel-item">
+								<img src="image/pro3.jpg" class="d-block w-100">
+								<div class="img-overlay"></div>
+							</div>
+							<div class="carousel-item">
+								<img src="image/pro4.jfif" class="d-block w-100">
+								<div class="img-overlay"></div>
+
+							</div>
+						</div>
+					</div>
+				</div>	
 			</div>
 		</div>
-	</div>	
+	</div>
+	
 	<h4 class="text-center text-info py-5">NEW ARRIVAL</h4>
 	<div class="container">
 		<div class="row">

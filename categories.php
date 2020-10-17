@@ -14,7 +14,7 @@
 
 
  ?>
- <h3 class="text-center text-info py-4">Our Products</h3>
+ <h3 class="text-center text-info py-5 my-5">Our Products</h3>
 	<div class="container">
 		<div class="row">
 			<div class="col-md-3 py-3 px-3">

@@ -11,7 +11,7 @@
 	//var_dump($items);
 
  ?>
-	<h3 class="text-center text-info py-4">Our Products</h3>
+	<h3 class="text-center text-info py-5 my-5">Our Products</h3>
 	<div class="container">
 		<div class="row">
 			<?php 

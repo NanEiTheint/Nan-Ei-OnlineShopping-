@@ -15,7 +15,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Hein Store</title>
+	<title>SunPalace Store</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="icon" href="image/girl1.ico" type="image/x-icon">
 
@@ -23,15 +23,11 @@
 	<link rel="stylesheet" type="text/css" href="fontawesome/css/all.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 
-
-
-	
-	
 </head>
 <body>
-	<nav class="navbar navbar-expand-lg navbar-light normal fixed-top mt-2">
+	<nav class="navbar navbar-expand-md navbar-light bg-light py-3 fixed-top menu">
 		<div class="container">
-			<a class="navbar-brand lead" href="index.php">Hein Store</a>
+			<a class="navbar-brand lead" href="index.php">SunPalace Store</a>
 		</div>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
@@ -74,16 +70,19 @@
 
 
 				 ?>
-				 <div class="dropdown">
-				  <a class="btn text-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				    <?php echo $_SESSION['loginuser']['name']; ?>
-				  </a>
-				  <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-				    <a href="#" class="dropdown-item btn">Profile</a>
-				    <a href="backend/logout.php" class="dropdown-item btn">Logout</a>
-				    
-				  </div>
-				</div>	
+				 <li class="nav-item px-2">
+					<div class="dropdown">
+					  <a class="btn text-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					    <?php echo $_SESSION['loginuser']['name']; ?>
+					  </a>
+					  <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+					    <a href="#" class="dropdown-item btn">Profile</a>
+					    <a href="backend/logout.php" class="dropdown-item btn">Logout</a>
+					    
+					  </div>
+					</div>	
+				</li>
+				 
 					
 				<?php 
 					}
