@@ -29,6 +29,8 @@
   <!-- Custom styles for this page -->
   <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
   <script type="text/javascript" src="js/jquery.min.js"></script>
+  <!-- Bootstrap core JavaScript-->
+ 
 
 </head>
 
@@ -84,6 +86,16 @@
         <a class="nav-link" href="subcategory_list.php">
           <i class="fas fa-clipboard-list"></i>
           <span>SubCategory List</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="order_list.php">
+          <i class="fas fa-clipboard-list"></i>
+          <span>Order List</span></a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="confirm_list.php">
+          <i class="fas fa-clipboard-list"></i>
+          <span>Confirm List</span></a>
       </li>
 
       <!-- Nav Item - Pages Collapse Menu -->

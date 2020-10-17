@@ -54,7 +54,7 @@
 								<td><?php echo $subcategory["cat_name"]; ?></td>
 								<td><a href="" class="btn btn-outline-primary">Detail</a>
 									<a href="subcategory_edit.php?id=<?php echo $subcategory['id']; ?>" class="btn btn-outline-warning">Edit</a>
-									<a href="" class="btn btn-outline-danger btnDelete" data-id="<?php echo $subcategory['id']; ?>">Delete</a></td>
+									<a href="" class="btn btn-outline-danger btnDeletesub" data-id="<?php echo $subcategory['id']; ?>">Delete</a></td>
 								</tr>
 								<?php
 							} 
@@ -66,27 +66,15 @@
 				</div>
 			</div>
 		</div>
-	<script type="text/javascript">
-		$(document).ready(function()
-		{
-			$(".btnDelete").click(function()
-			{
-				var id=$(this).data("id");
-				var ans=confirm("Are you sure to delete this row!");
-				if(ans)
-				{
-					$.post("subcategory_delete.php",{subcat_id:id});
-				}
-			})
-		})
-	</script>
- <?php 
+	
+ <?php
+	include "include/footer.php";
+  
  	}
   else
   {
     header("location:../index.php");
   }
 	
-	include "include/footer.php";
 
  ?>

@@ -26,11 +26,12 @@
 		</div>
 	</div>
 <?php 
+	include "include/footer.php";
 		}
   else
   {
     header("location:../index.php");
   }
-	include "include/footer.php";
+	
 
  ?>

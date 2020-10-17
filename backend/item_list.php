@@ -8,9 +8,6 @@
 	include "include/header.php";
 	include "dbconnection.php";
 
-  
-
-
  ?>
  
 	<!-- Page Heading -->
@@ -83,7 +80,7 @@
 
                   		 	<td><a href="item_detail.php?id=<?php echo $item['id']; ?>" class="btn btn-outline-primary">Detail</a>
                   		 	<a href="item_edit.php?id=<?php echo $item['id']; ?>" class="btn btn-outline-warning">Edit</a>
-                  		 <a href="" class="btn btn-outline-danger btnDelete" data-id="<?php echo $item['id']; ?>">Delete</a></td>
+                  		 <a href="" class="btn btn-outline-danger btnDeleteitem" data-id="<?php echo $item['id']; ?>">Delete</a></td>
                   		 </tr>
 
                   		 <?php
@@ -97,29 +94,13 @@
             </div>
   </div>
   
-<script type="text/javascript">
-  $(document).ready(function()
-  {
-    $(".btnDelete").click(function()
-    {
-      var ans=confirm("Are you sure to delete!");
 
-      if (ans) 
-      {
-        var id=$(this).data("id");
-        //console.log(id);
-        $.post("item_delete.php",{item_id:id});
-      }
-      
-    })
-  })
-</script>
 <?php 
+  include "include/footer.php";
   }
   else
   {
     header("location:../index.php");
   }
 
-	include "include/footer.php";
  ?>

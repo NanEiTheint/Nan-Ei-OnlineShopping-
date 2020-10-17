@@ -51,7 +51,7 @@
 								<td><?php echo $brand["name"]; ?></td>
 								<td><a href="" class="btn btn-outline-primary">Detail</a>
 									<a href="brand_edit.php?id=<?php echo $brand['id']; ?>" class="btn btn-outline-warning">Edit</a>
-									<a href="" class="btn btn-outline-danger btnDelete" data-id="<?php echo $brand['id']; ?>">Delete</a></td>
+									<a href="" class="btn btn-outline-danger btnDeletebrand" data-id="<?php echo $brand['id']; ?>">Delete</a></td>
 								</tr>
 								<?php
 							} 
@@ -63,28 +63,15 @@
 				</div>
 			</div>
 		</div>
-	<script type="text/javascript">
-		$(document).ready(function()
-		{
-			$(".btnDelete").click(function()
-			{
-				var id=$(this).data("id");
-				//console.log(id);
-				var ans=confirm("Are you sure to delete this row!");
-				if(ans)
-				{
-					$.post("brand_delete.php",{brand_id:id});
-				}
-			})
-		})
-	</script>
+	
  <?php
+	include "include/footer.php";
+ 	
  	}
   else
   {
     header("location:../index.php");
   } 
 
-	include "include/footer.php";
 
  ?>

@@ -44,7 +44,7 @@
 				foreach ($items as $item) {
 					
 			 ?>
-			<div class="col-md-3 col-6 py-4">
+			<div class="col-md-3 col-6 py-4 px-2">
 				<div class="card">
                         <img class="card-img-top product_img" src="backend/<?= $item['photo'] ?>">
                         

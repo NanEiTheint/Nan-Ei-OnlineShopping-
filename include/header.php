@@ -39,8 +39,8 @@
 		<div class="collapse navbar-collapse" id="navbarNav">
 			<ul class="navbar-nav">
 				<li class="nav-item">
-					<a href="#" class="nav-link" id="count">
-						<span class="p1 fa-stack has-badge" id="item_count">
+					<a href="checkout.php" class="nav-link" id="count">
+						<span class="p1 fa-stack has-badge" id="noti">
 							<i class="p3 fa fa-shopping-cart fa-stack-1x xfa-inverse"></i>
 						</span>
 					
